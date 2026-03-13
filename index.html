@@ -554,18 +554,18 @@ footer .cp2{color:var(--border);font-size:11px;letter-spacing:2px;margin-top:6px
 <!-- ===== LANDING PAGE ===== -->
 <div class="landing" id="landingPage">
 <div class="land-fallback grad-bg grad-navy" id="landFallback"></div>
-<video id="heroVideo" autoplay muted playsinline poster="images/hero.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:opacity 1s ease">
+<video id="heroVideo" autoplay muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity 1s ease">
 <source src="hero-video.mp4" type="video/mp4">
 </video>
 <script>
 (function(){
 const hv=document.getElementById('heroVideo');
 const fb=document.getElementById('landFallback');
-// When video can play, fade out fallback
-hv.addEventListener('canplay',()=>{fb.style.opacity='0';},{ once:true });
-// On error, hide video — fallback gradient stays visible
+// When video can play, fade it in and hide fallback
+hv.addEventListener('canplay',()=>{hv.style.opacity='1';fb.style.opacity='0';},{ once:true });
+// On error, keep gradient fallback
 hv.addEventListener('error',()=>{hv.style.display='none';});
-// If autoplay fails after 5s, hide video
+// If autoplay fails after 5s, keep gradient
 setTimeout(()=>{if(hv.readyState<2||hv.paused){hv.style.display='none';}},5000);
 // Try to play — catch autoplay rejection (iOS Safari)
 const p=hv.play();
@@ -1562,7 +1562,7 @@ function renderMantisPillars(){
     const inits=I.filter(it=>it.mantis===p.nmFull);
     return `<div class="m4-pill" id="pill_${p.id}" onclick="togglePill('${p.id}')" style="border-right:3px solid ${p.color}">
       <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px"><span style="font-size:16px">${p.icon}</span><span style="color:${p.color};font-size:14px;font-weight:700">${p.nm}</span><span style="margin-right:auto;font-family:var(--fe);font-size:12px;color:rgba(255,255,255,.3)">${inits.length}</span></div>
-      <p style="font-size:11px;color:rgba(255,255,255,.3);line-height:1.8">${isAr?(p.id==='p1'?'حماية البيئة والتنوع البيولوجي':p.id==='p2'?'تمكين المجتمعات وحفظ التراث':p.id==='p3'?'تجارب مستدامة للضيوف':'المصداقية عبر الشفافية'):(p.id==='p1'?'Environmental protection & biodiversity':p.id==='p2'?'Community empowerment & heritage':'Guest sustainable experiences':'Credibility through transparency')}</p>
+      <p style="font-size:11px;color:rgba(255,255,255,.3);line-height:1.8">${isAr?(p.id==='p1'?'حماية البيئة والتنوع البيولوجي':p.id==='p2'?'تمكين المجتمعات وحفظ التراث':p.id==='p3'?'تجارب مستدامة للضيوف':'المصداقية عبر الشفافية'):(p.id==='p1'?'Environmental protection & biodiversity':p.id==='p2'?'Community empowerment & heritage':p.id==='p3'?'Guest sustainable experiences':'Credibility through transparency')}</p>
       <div class="m4-chips" id="chips_${p.id}" style="display:none">${inits.map(it=>`<span class="m4-chip" onclick="event.stopPropagation();opM(${it.id})">${it.em} ${isAr?it.nm:it.nmEN}</span>`).join('')}</div>
     </div>`;
   }).join('');
