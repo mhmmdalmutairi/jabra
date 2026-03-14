@@ -497,8 +497,6 @@ footer .cp2{color:var(--border);font-size:11px;letter-spacing:2px;margin-top:6px
 
 
 /* ===== MANTIS SUB-SLIDES ===== */
-.mantis-sub{width:100%;transition:opacity .5s ease,transform .5s ease;opacity:0;transform:translateX(-30px)}
-.mantis-sub.active{opacity:1;transform:translateX(0);display:flex!important}
 .mantis-arrow:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.3)!important}
 .m4-pill{padding:14px 16px;border-radius:10px;cursor:pointer;transition:all .4s;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);text-align:right}
 .m4-pill:hover{background:rgba(255,255,255,.06)}
@@ -528,10 +526,8 @@ footer .cp2{color:var(--border);font-size:11px;letter-spacing:2px;margin-top:6px
 /* ===== MOBILE OPTIMIZATIONS ===== */
 @media(max-width:600px){
   .s5b .sgrid-nums{grid-template-columns:1fr 1fr!important}
-  .mantis-sub{padding:30px 14px!important}
   .m4-pillars{grid-template-columns:1fr!important}
   .m4-pill{padding:12px}
-  .mantis-nav{bottom:60px!important}
   .snext{bottom:60px!important}
   .s7 h2{font-size:clamp(20px,6vw,28px)!important}
   .cov-label{min-width:80px;font-size:10px}
@@ -539,7 +535,6 @@ footer .cp2{color:var(--border);font-size:11px;letter-spacing:2px;margin-top:6px
 }
 @media(max-width:375px){
   .slide{padding:20px 10px 60px!important}
-  .mantis-sub{padding:20px 10px!important}
   .scard{padding:12px 8px}
   .ic2{padding:10px}
   .ic2 .nm{font-size:11px}
@@ -640,45 +635,45 @@ hv.addEventListener('timeupdate',()=>{
 <p class="intro" data-ar="ثلاثة مكوّنات متكاملة ضمن إطار عالمي يضمن المصداقية" data-en="Three integrated components within a global framework ensuring credibility">ثلاثة مكوّنات متكاملة ضمن إطار عالمي يضمن المصداقية</p>
 <div class="sgrid">
 <div class="scard anim-in"><div class="num" data-count="10">0</div><h3 data-ar="أبعاد تحليلية" data-en="Analytical Dimensions">أبعاد تحليلية</h3><p data-ar="كل مبادرة تُحلَّل من ١٠ زوايا — غيّر الزاوية يُعاد ترتيب كل شي" data-en="Each initiative analyzed from 10 angles — change the angle and everything reorders">كل مبادرة تُحلَّل من ١٠ زوايا — غيّر الزاوية يُعاد ترتيب كل شي</p><div class="schips" id="dcp"></div></div>
-<div class="scard anim-in anim-delay-1"><div class="num" data-count="16">0</div><h3 data-ar="مبادرة تنموية" data-en="Development Initiatives">مبادرة تنموية</h3><p data-ar="كل مبادرة تحقق أثرين: تجربة للضيف وتنمية للمجتمع" data-en="Each initiative achieves dual impact: guest experience and community development">كل مبادرة تحقق أثرين: تجربة للضيف وتنمية للمجتمع</p><div class="schips"><span class="schip" style="background:#dcfce7;color:#15803d">٤ أساسية</span><span class="schip" style="background:#dbeafe;color:#1d4ed8">٦ اختيارية</span><span class="schip" style="background:#fef3c7;color:#92400e">٢ استمرار</span><span class="schip" style="background:#f3e8ff;color:#7c3aed">٤ بنية</span></div></div>
+<div class="scard anim-in anim-delay-1"><div class="num" data-count="16">0</div><h3 data-ar="مبادرة تنموية" data-en="Development Initiatives">مبادرة تنموية</h3><p data-ar="كل مبادرة تحقق أثرين: تجربة للضيف وتنمية للمجتمع" data-en="Each initiative achieves dual impact: guest experience and community development">كل مبادرة تحقق أثرين: تجربة للضيف وتنمية للمجتمع</p></div>
 <div class="scard anim-in anim-delay-2"><div class="num">◈</div><h3 data-ar="إطار Mantis Impact" data-en="Mantis Impact Framework">إطار Mantis Impact</h3><p data-ar="إطار عالمي للسياحة المسؤولة — ٤ مكوّنات و ٤ محاور عمل" data-en="Global responsible tourism framework — 4 components and 4 action axes">إطار عالمي للسياحة المسؤولة — ٤ مكوّنات و ٤ محاور عمل</p><div class="schips"><span class="schip">Conservation</span><span class="schip">Community</span><span class="schip">Guest Exp.</span><span class="schip">Advocacy</span></div></div>
 </div>
 <div class="snext" onclick="goS(3)"><span data-ar="إطار Mantis" data-en="Mantis Framework">إطار Mantis</span><span class="arr">↓</span></div>
 </div>
 
-<div class="slide s4 grad-bg grad-navy" data-s="3" style="padding:0">
-<div class="mantis-container" id="mantisContainer" style="width:100%;height:100%;position:relative;overflow:hidden">
-
-<!-- Sub-slide 1: Why Mantis? -->
-<div class="mantis-sub active" id="ms1" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;min-height:100vh;min-height:100dvh">
+<!-- Mantis Slide 1: Why Mantis? -->
+<div class="slide grad-bg grad-navy" data-s="3" style="text-align:center;color:#fff">
 <p class="tgl" dir="ltr" style="margin-bottom:12px">MAN AND NATURE TOGETHER IS SUSTAINABLE</p>
 <h2 style="font-size:clamp(22px,4vw,34px);margin-bottom:16px" data-ar="لماذا Mantis؟" data-en="Why Mantis?">لماذا Mantis؟</h2>
 <p style="max-width:560px;font-size:clamp(13px,1.6vw,15px);color:rgba(255,255,255,.5);line-height:2.4;margin-bottom:24px" data-ar="لسنا مجرد فندق يحمل شعار Mantis — نحن نبني نموذجاً يكون التطبيق الأعمق لفلسفتكم" data-en="We're not just a hotel bearing the Mantis logo — we're building a model that is the deepest application of your philosophy">لسنا مجرد فندق يحمل شعار Mantis — نحن نبني نموذجاً يكون التطبيق الأعمق لفلسفتكم</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px;width:100%;text-align:right">
-<div style="padding:16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)"><span style="color:var(--gold);font-size:14px;font-weight:700" data-ar="تطابق القيم" data-en="Value Alignment">تطابق القيم</span><p style="font-size:12px;color:rgba(255,255,255,.4);line-height:2;margin-top:4px" data-ar="كل مبادرة مبنية على فلسفة تآزر الإنسان والطبيعة" data-en="Every initiative built on the philosophy of human-nature synergy">كل مبادرة مبنية على فلسفة تآزر الإنسان والطبيعة</p></div>
-<div style="padding:16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)"><span style="color:var(--gold);font-size:14px;font-weight:700" data-ar="القابلية للقياس" data-en="Measurability">القابلية للقياس</span><p style="font-size:12px;color:rgba(255,255,255,.4);line-height:2;margin-top:4px" data-ar="كل مبادرة لها مؤشرات أثر واضحة من اليوم الأول" data-en="Every initiative has clear impact indicators from day one">كل مبادرة لها مؤشرات أثر واضحة من اليوم الأول</p></div>
-<div style="padding:16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)"><span style="color:var(--gold);font-size:14px;font-weight:700" data-ar="عمق التطبيق" data-en="Depth of Application">عمق التطبيق</span><p style="font-size:12px;color:rgba(255,255,255,.4);line-height:2;margin-top:4px" data-ar="ليس محوراً واحداً بل ١٦ مبادرة تغطي كل المحاور" data-en="Not just one axis but 16 initiatives covering all pillars">ليس محوراً واحداً بل ١٦ مبادرة تغطي كل المحاور</p></div>
-<div style="padding:16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)"><span style="color:var(--gold);font-size:14px;font-weight:700" data-ar="أصالة محلية" data-en="Local Authenticity">أصالة محلية</span><p style="font-size:12px;color:rgba(255,255,255,.4);line-height:2;margin-top:4px" data-ar="كل مبادرة مبنية على أصول محلية حقيقية من الباحة" data-en="Every initiative built on genuine local assets from Al-Baha">كل مبادرة مبنية على أصول محلية حقيقية من الباحة</p></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px;width:100%">
+<div style="padding:16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);text-align:right"><span style="color:var(--gold);font-size:14px;font-weight:700" data-ar="تطابق القيم" data-en="Value Alignment">تطابق القيم</span><p style="font-size:12px;color:rgba(255,255,255,.4);line-height:2;margin-top:4px" data-ar="كل مبادرة مبنية على فلسفة تآزر الإنسان والطبيعة" data-en="Every initiative built on the philosophy of human-nature synergy">كل مبادرة مبنية على فلسفة تآزر الإنسان والطبيعة</p></div>
+<div style="padding:16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);text-align:right"><span style="color:var(--gold);font-size:14px;font-weight:700" data-ar="القابلية للقياس" data-en="Measurability">القابلية للقياس</span><p style="font-size:12px;color:rgba(255,255,255,.4);line-height:2;margin-top:4px" data-ar="كل مبادرة لها مؤشرات أثر واضحة من اليوم الأول" data-en="Every initiative has clear impact indicators from day one">كل مبادرة لها مؤشرات أثر واضحة من اليوم الأول</p></div>
+<div style="padding:16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);text-align:right"><span style="color:var(--gold);font-size:14px;font-weight:700" data-ar="عمق التطبيق" data-en="Depth of Application">عمق التطبيق</span><p style="font-size:12px;color:rgba(255,255,255,.4);line-height:2;margin-top:4px" data-ar="ليس محوراً واحداً بل ١٦ مبادرة تغطي كل المحاور" data-en="Not just one axis but 16 initiatives covering all pillars">ليس محوراً واحداً بل ١٦ مبادرة تغطي كل المحاور</p></div>
+<div style="padding:16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);text-align:right"><span style="color:var(--gold);font-size:14px;font-weight:700" data-ar="أصالة محلية" data-en="Local Authenticity">أصالة محلية</span><p style="font-size:12px;color:rgba(255,255,255,.4);line-height:2;margin-top:4px" data-ar="كل مبادرة مبنية على أصول محلية حقيقية من الباحة" data-en="Every initiative built on genuine local assets from Al-Baha">كل مبادرة مبنية على أصول محلية حقيقية من الباحة</p></div>
 </div>
+<div class="snext" onclick="goS(4)"><span style="color:rgba(255,255,255,.25)" data-ar="الإطار الرباعي" data-en="The Four Pillars">الإطار الرباعي</span><span class="arr">↓</span></div>
 </div>
 
-<!-- Sub-slide 2: Quadrant Framework (interactive) -->
-<div class="mantis-sub" id="ms2" style="display:none;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;min-height:100vh;min-height:100dvh">
+<!-- Mantis Slide 2: Quadrant Framework -->
+<div class="slide grad-bg grad-navy" data-s="4" style="text-align:center;color:#fff">
 <h2 style="font-size:clamp(18px,3vw,26px);margin-bottom:6px" data-ar="الإطار الرباعي" data-en="The Four Pillars">الإطار الرباعي</h2>
 <p style="font-size:12px;color:rgba(255,255,255,.35);margin-bottom:20px" data-ar="اضغط على أي محور لاستكشاف مبادراته" data-en="Click any pillar to explore its initiatives">اضغط على أي محور لاستكشاف مبادراته</p>
 <div class="m4-pillars" id="m4Pillars" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:640px;width:100%;text-align:right"></div>
+<div class="snext" onclick="goS(5)"><span style="color:rgba(255,255,255,.25)" data-ar="خريطة التغطية" data-en="Coverage Map">خريطة التغطية</span><span class="arr">↓</span></div>
 </div>
 
-<!-- Sub-slide 3: Coverage Map -->
-<div class="mantis-sub" id="ms3" style="display:none;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;min-height:100vh;min-height:100dvh">
+<!-- Mantis Slide 3: Coverage Map -->
+<div class="slide grad-bg grad-navy" data-s="5" style="text-align:center;color:#fff">
 <h2 style="font-size:clamp(18px,3vw,26px);margin-bottom:6px" data-ar="خريطة التغطية" data-en="Coverage Map">خريطة التغطية</h2>
 <p style="font-size:12px;color:rgba(255,255,255,.35);margin-bottom:16px" data-ar="١٠٠٪ تغطية لكل محاور Mantis Impact" data-en="100% coverage of all Mantis Impact pillars">١٠٠٪ تغطية لكل محاور Mantis Impact</p>
 <div id="coverageMap" style="max-width:700px;width:100%"></div>
 <p style="font-size:12px;color:rgba(255,255,255,.3);margin-top:16px;max-width:500px;line-height:2" data-ar="تركيزنا على المجتمع مقصود — المنطقة تحتاج تنمية حقيقية، والسياحة المسؤولة هي الأداة" data-en="Our community focus is intentional — the region needs real development, and responsible tourism is the tool">تركيزنا على المجتمع مقصود — المنطقة تحتاج تنمية حقيقية، والسياحة المسؤولة هي الأداة</p>
+<div class="snext" onclick="goS(6)"><span style="color:rgba(255,255,255,.25)" data-ar="التكامل مع أسفار" data-en="Integration with Asfar">التكامل مع أسفار</span><span class="arr">↓</span></div>
 </div>
 
-<!-- Sub-slide 4: Asfar Integration -->
-<div class="mantis-sub" id="ms4" style="display:none;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;min-height:100vh;min-height:100dvh">
+<!-- Mantis Slide 4: Asfar Integration -->
+<div class="slide grad-bg grad-navy" data-s="6" style="text-align:center;color:#fff">
 <h2 style="font-size:clamp(18px,3vw,26px);margin-bottom:6px" data-ar="التكامل مع أسفار" data-en="Integration with Asfar">التكامل مع أسفار</h2>
 <p style="font-size:12px;color:rgba(255,255,255,.35);margin-bottom:20px" data-ar="كيف يضيف نموذج الجبرة قيمة لمحفظة أسفار" data-en="How the Jabra Model adds value to Asfar's portfolio">كيف يضيف نموذج الجبرة قيمة لمحفظة أسفار</p>
 <div style="display:grid;grid-template-columns:1fr;gap:8px;max-width:560px;width:100%;text-align:right">
@@ -688,19 +683,11 @@ hv.addEventListener('timeupdate',()=>{
 <div style="padding:14px 16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:10px"><span style="font-size:22px">🤝</span><div><span style="color:#E8A08D;font-size:13px;font-weight:700" data-ar="ربط السياحة بالتنمية" data-en="Linking Tourism to Development">ربط السياحة بالتنمية</span><p style="font-size:11px;color:rgba(255,255,255,.35);margin-top:2px" data-ar="كل ريال سياحي يولّد أثراً تنموياً حقيقياً — مو مجرد شعار" data-en="Every tourism riyal generates real development impact — not just a slogan">كل ريال سياحي يولّد أثراً تنموياً حقيقياً — مو مجرد شعار</p></div></div>
 <div style="padding:14px 16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:10px"><span style="font-size:22px">✅</span><div><span style="color:#8ED4B0;font-size:13px;font-weight:700" data-ar="Global Humane Certified™" data-en="Global Humane Certified™">Global Humane Certified™</span><p style="font-size:11px;color:rgba(255,255,255,.35);margin-top:2px" data-ar="جاهزون لشهادة الاستدامة العالمية من اللحظة الأولى" data-en="Ready for global sustainability certification from day one">جاهزون لشهادة الاستدامة العالمية من اللحظة الأولى</p></div></div>
 </div>
-</div>
-
-<!-- Mantis Navigation -->
-<div class="mantis-nav" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;z-index:10">
-<button onclick="mantisNav(-1)" class="mantis-arrow" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:#fff;font-size:14px;cursor:pointer;transition:all .3s">→</button>
-<div id="mantisDots" style="display:flex;gap:6px"></div>
-<button onclick="mantisNav(1)" class="mantis-arrow" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:#fff;font-size:14px;cursor:pointer;transition:all .3s">←</button>
-</div>
-</div>
+<div class="snext" onclick="goS(7)"><span style="color:rgba(255,255,255,.25)" data-ar="النموذج بأرقام" data-en="The Model in Numbers">النموذج بأرقام</span><span class="arr">↓</span></div>
 </div>
 
 <!-- Summary Slide -->
-<div class="slide s5b grad-bg grad-warm" data-s="4">
+<div class="slide s5b grad-bg grad-warm" data-s="7">
 <h2 style="font-size:clamp(20px,3.5vw,30px);font-weight:800;color:var(--navy);margin-bottom:24px" data-ar="النموذج بأرقام" data-en="The Model in Numbers">النموذج بأرقام</h2>
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:700px;width:100%">
 <div style="text-align:center;padding:20px 12px;border-radius:12px;background:var(--card);border:1px solid var(--border)"><span style="font-family:var(--fe);font-size:clamp(28px,5vw,42px);font-weight:800;color:var(--gold);display:block">16</span><span style="font-size:12px;font-weight:700;color:var(--navy)" data-ar="مبادرة تنموية" data-en="Initiatives">مبادرة تنموية</span></div>
@@ -708,11 +695,11 @@ hv.addEventListener('timeupdate',()=>{
 <div style="text-align:center;padding:20px 12px;border-radius:12px;background:var(--card);border:1px solid var(--border)"><span style="font-family:var(--fe);font-size:clamp(28px,5vw,42px);font-weight:800;color:var(--gold);display:block">5</span><span style="font-size:12px;font-weight:700;color:var(--navy)" data-ar="سلاسل قيمة" data-en="Value Chains">سلاسل قيمة</span></div>
 <div style="text-align:center;padding:20px 12px;border-radius:12px;background:var(--card);border:1px solid var(--border)"><span style="font-family:var(--fe);font-size:clamp(28px,5vw,42px);font-weight:800;color:var(--gold);display:block">4</span><span style="font-size:12px;font-weight:700;color:var(--navy)" data-ar="محاور Mantis" data-en="Mantis Pillars">محاور Mantis</span></div>
 </div>
-<div class="snext" onclick="goS(5)"><span data-ar="الخلاصة" data-en="Conclusion">الخلاصة</span><span class="arr">↓</span></div>
+<div class="snext" onclick="goS(8)"><span data-ar="الخلاصة" data-en="Conclusion">الخلاصة</span><span class="arr">↓</span></div>
 </div>
 
 <!-- Closing Slide -->
-<div class="slide s7 grad-bg grad-navy" data-s="5" style="position:relative">
+<div class="slide s7 grad-bg grad-navy" data-s="8" style="position:relative">
 <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,85,88,.85) 0%,rgba(30,85,88,.95) 100%);z-index:0"></div>
 <div style="position:relative;z-index:1;text-align:center;max-width:600px">
 <div class="ln" style="margin-bottom:20px;opacity:0;animation:fu .7s .2s forwards"></div>
@@ -745,7 +732,7 @@ hv.addEventListener('timeupdate',()=>{
 <div class="sum-stat anim-in" onclick="showPage('inits')" style="cursor:pointer"><span class="num" data-count="16">0</span><span class="lbl" data-ar="مبادرة تنموية" data-en="Development Initiatives">مبادرة تنموية</span><span class="desc" data-ar="تجربة + تنمية" data-en="Experience + Development">تجربة + تنمية</span></div>
 <div class="sum-stat anim-in anim-delay-1" onclick="showPage('dims')" style="cursor:pointer"><span class="num" data-count="10">0</span><span class="lbl" data-ar="أبعاد تحليلية" data-en="Analytical Dimensions">أبعاد تحليلية</span><span class="desc" data-ar="زوايا نظر متعددة" data-en="Multiple perspectives">زوايا نظر متعددة</span></div>
 <div class="sum-stat anim-in anim-delay-2" onclick="showPage('clusters')" style="cursor:pointer"><span class="num" data-count="5">0</span><span class="lbl" data-ar="سلاسل قيمة" data-en="Value Chains">سلاسل قيمة</span><span class="desc" data-ar="ربط مترابط" data-en="Interconnected links">ربط مترابط</span></div>
-<div class="sum-stat anim-in anim-delay-3" onclick="showPage('model');setTimeout(()=>goS(3),300)" style="cursor:pointer"><span class="num" data-count="4">0</span><span class="lbl" data-ar="محاور Mantis" data-en="Mantis Pillars">محاور Mantis</span><span class="desc" data-ar="إطار عالمي" data-en="Global framework">إطار عالمي</span></div>
+<div class="sum-stat anim-in anim-delay-3" onclick="showPage('model');setTimeout(()=>goS(4),300)" style="cursor:pointer"><span class="num" data-count="4">0</span><span class="lbl" data-ar="محاور Mantis" data-en="Mantis Pillars">محاور Mantis</span><span class="desc" data-ar="إطار عالمي" data-en="Global framework">إطار عالمي</span></div>
 </div>
 <div class="sum-phil anim-in" data-ar="في كل منتجع سياحي — المجتمع المحلي يخدم الضيف. في نموذج الجبرة — المجتمع هو التجربة نفسها. كل ريال يدفعه الضيف يخلق أثرين: تجربة ما يلقاها في أي مكان ثاني — وتنمية حقيقية لأهل المكان." data-en="In every resort — the local community serves the guest. In the Jabra Model — the community IS the experience. Every riyal the guest pays creates two impacts: an experience found nowhere else — and real development for the locals.">في كل منتجع سياحي — المجتمع المحلي يخدم الضيف. في نموذج الجبرة — المجتمع <strong style="color:var(--gold)">هو التجربة نفسها.</strong> كل ريال يدفعه الضيف يخلق أثرين: تجربة ما يلقاها في أي مكان ثاني — <strong style="color:var(--gold)">وتنمية حقيقية لأهل المكان.</strong></div>
 <div class="sum-section">
@@ -1051,6 +1038,9 @@ function toggleLang(){
   renderGlossary();
   renderClusters();
   renderDims();
+  renderDCP();
+  renderMantisPillars();
+  renderCoverageMap();
   if(document.getElementById('pageSummary').classList.contains('active')) renderSummary();
   if(document.getElementById('pageDims').classList.contains('active')) renderDimensionsPage();
   applyGlossHighlights();
@@ -1097,7 +1087,7 @@ function goS(n){
   if(slides[n]) slides[n].classList.add('on');
   cS2=n;updDots();
   // Trigger counter animations
-  if(n===2) animateCounters(slides[n]);
+  if(n===2||n===7) animateCounters(slides[n]);
 }
 function updDots(){document.querySelectorAll('.sdot').forEach((d,i)=>{d.classList.toggle('on',i===cS2)})}
 function initDots(){
@@ -1388,17 +1378,8 @@ document.addEventListener('keydown',(e)=>{
   const pg=document.getElementById('pageModel');
   if(pg&&pg.classList.contains('active')){
     const totalSlides=document.querySelectorAll('.slide').length;
-    if(e.key==='ArrowDown'||e.key===' '){e.preventDefault();
-      if(cS2===3){// On Mantis slide
-        if(curMantis<3){mantisNav(1);}else{goS(cS2+1);}
-      }else{goS(Math.min(cS2+1,totalSlides-1));}
-    }
-    if(e.key==='ArrowUp'){e.preventDefault();
-      if(cS2===3&&curMantis>0){mantisNav(-1);}
-      else{goS(Math.max(cS2-1,0));}
-    }
-    if(e.key==='ArrowLeft'){if(cS2===3)mantisNav(1);}
-    if(e.key==='ArrowRight'){if(cS2===3)mantisNav(-1);}
+    if(e.key==='ArrowDown'||e.key===' '){e.preventDefault();goS(Math.min(cS2+1,totalSlides-1));}
+    if(e.key==='ArrowUp'){e.preventDefault();goS(Math.max(cS2-1,0));}
   }
 });
 
@@ -1411,13 +1392,8 @@ if(swEl){
     const diff=touchY-e.changedTouches[0].clientY;
     if(Math.abs(diff)>50){
       const totalS=document.querySelectorAll('.slide').length;
-      if(diff>0){
-        if(cS2===3&&curMantis<3){mantisNav(1);}
-        else{goS(Math.min(cS2+1,totalS-1));}
-      }else{
-        if(cS2===3&&curMantis>0){mantisNav(-1);}
-        else{goS(Math.max(cS2-1,0));}
-      }
+      if(diff>0){goS(Math.min(cS2+1,totalS-1));}
+      else{goS(Math.max(cS2-1,0));}
     }
   });
 }
@@ -1502,51 +1478,6 @@ function backToPresentation(){
   showPage('model');
 }
 
-// ===== MANTIS SUB-SLIDE NAVIGATION =====
-let curMantis=0;
-function mantisNav(dir){
-  const subs=document.querySelectorAll('.mantis-sub');
-  subs[curMantis].classList.remove('active');
-  subs[curMantis].style.display='none';
-  curMantis=Math.max(0,Math.min(subs.length-1,curMantis+dir));
-  subs[curMantis].style.display='flex';
-  requestAnimationFrame(()=>{subs[curMantis].classList.add('active');});
-  updMantisDots();
-}
-function goMantis(n){
-  const subs=document.querySelectorAll('.mantis-sub');
-  subs[curMantis].classList.remove('active');
-  subs[curMantis].style.display='none';
-  curMantis=n;
-  subs[curMantis].style.display='flex';
-  requestAnimationFrame(()=>{subs[curMantis].classList.add('active');});
-  updMantisDots();
-}
-function updMantisDots(){
-  const c=document.getElementById('mantisDots');
-  c.innerHTML='';
-  for(let i=0;i<4;i++){
-    const d=document.createElement('span');
-    d.style.cssText='width:8px;height:8px;border-radius:50%;cursor:pointer;transition:all .3s;'+(i===curMantis?'background:var(--gold);transform:scale(1.3)':'background:rgba(255,255,255,.2)');
-    d.onclick=()=>goMantis(i);
-    c.appendChild(d);
-  }
-}
-
-// Mantis touch/swipe
-(function(){
-  const mc=document.getElementById('mantisContainer');
-  if(!mc)return;
-  let sx=0;
-  mc.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});
-  mc.addEventListener('touchend',e=>{
-    const diff=sx-e.changedTouches[0].clientX;
-    if(Math.abs(diff)>50){
-      // RTL: swipe left = next, swipe right = prev
-      if(diff>0)mantisNav(1);else mantisNav(-1);
-    }
-  });
-})();
 
 // ===== MANTIS QUADRANT RENDERING =====
 function renderMantisPillars(){
@@ -1665,7 +1596,6 @@ window.addEventListener('DOMContentLoaded',()=>{
   initDots();
   renderDCP();
   renderDims();
-  updMantisDots();
   renderMantisPillars();
   renderCoverageMap();
   document.body.classList.add('pres-mode');
@@ -1680,7 +1610,8 @@ window.addEventListener('DOMContentLoaded',()=>{
     e.preventDefault();
     if(wheelTimer)return;
     wheelTimer=setTimeout(()=>{wheelTimer=null;},800);
-    if(e.deltaY>0)goS(Math.min(cS2+1,4));
+    const totalS=document.querySelectorAll('.slide').length;
+    if(e.deltaY>0)goS(Math.min(cS2+1,totalS-1));
     else goS(Math.max(cS2-1,0));
   },{passive:false});
   document.addEventListener('click',e=>{if(!e.target.closest('.gterm'))document.querySelectorAll('.gterm.tip-open').forEach(t=>t.classList.remove('tip-open'));if(!e.target.closest('.dc'))document.querySelectorAll('.dc.tip-open').forEach(d=>d.classList.remove('tip-open'));});
