@@ -900,12 +900,12 @@ const IMG={1:"images/init-1.jpeg",
 8:"images/init-8.jpeg",
 9:"images/init-9.jpeg",
 10:"images/init-10.jpeg",
-11:"images/init-1.jpeg",
-12:"images/init-2.jpeg",
-13:"images/init-3.jpeg",
-14:"images/init-4.jpeg",
-15:"images/init-5.jpeg",
-16:"images/init-6.jpeg"};
+11:"images/init-11.jpeg",
+12:"images/init-12.jpeg",
+13:"images/init-13.jpeg",
+14:"images/init-14.jpeg",
+15:"images/init-15.jpeg",
+16:"images/init-16.jpeg"};
 
 if('scrollRestoration' in history) history.scrollRestoration='manual';
 window.scrollTo(0,0);
@@ -1218,7 +1218,7 @@ function buildATable(filter,tc){
 function opM(id){
   const it=I.find(x=>x.id===id);if(!it)return;
   const isAr=curLang==='ar';
-  const img=IMG[id]?`<div class="mmedia"><img src="${IMG[id]}" alt="${it.nm}" loading="lazy"></div>`:'';
+  const img=IMG[id]?`<div class="mmedia"><img src="${IMG[id]}" alt="${it.nm}"></div>`:'';
   let h=`<div class="mh"><span class="em">${it.em}</span><h2>${isAr?it.nm:it.nmEN}</h2><p class="ph">${isAr?it.ph:it.phEN}</p></div><div class="mb">${img}<p class="fd">${isAr?it.fd:it.fdEN}</p>`;
   // Levels
   h+=`<div class="st"><span class="bar"></span>${isAr?'مستويات التطبيق':'Implementation Levels'}</div><div class="lvg">${it.lv.map((l,i)=>{const lc=LC[i+1];return `<div class="lvc" style="background:${lc.bg};border:1px solid ${lc.border}"><span class="lvl" style="background:${lc.lblBg};color:${lc.lbl}">${isAr?l.l:l.lEN}</span><p class="lvd">${isAr?l.d:l.dEN}</p></div>`;}).join('')}</div>`;
